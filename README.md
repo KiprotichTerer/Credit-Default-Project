@@ -5,27 +5,6 @@
 
 This project uses credit client data to build a machine learning model that predicts whether a client will default on their payment in the next month. The workflow includes data preprocessing, exploratory data analysis (EDA), feature engineering, model training, and serving predictions using an XGBoost model.
 
-## Project Structure
-
-Credit Default Prediction Project/
-│
-├── data/                      # Contains the dataset
-│   └── default of credit clients.xls
-├── venv/                      # Virtual environment folder
-│   ├── Scripts/               # Scripts for activating the environment
-│   ├── lib/                   # Installed Python libraries
-│   └── pyvenv.cfg             # Configuration for the virtual environment
-├── Dockerfile             # Dockerfile for running the service
-├── notebook.ipynb         # Jupyter notebook for EDA, model selection, and feature engineering
-├── predict.py             # Script for serving predictions
-│
-├── README.md                  # Project documentation
-├── requirements.txt       # List of Python dependencies
-├── train.py               # Script for training and saving the model
-├── xgb_model.pkl          # Trained XGBoost model
-├── dv.pkl                 # DictVectorizer model
-│
-
 ---
 ## Data Description
 
