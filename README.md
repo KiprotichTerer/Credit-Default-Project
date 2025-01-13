@@ -7,7 +7,6 @@ This project uses credit client data to build a machine learning model that pred
 
 ## Project Structure
 
-```plaintext
 Credit Default Prediction Project/
 │
 ├── data/                      # Contains the dataset
@@ -26,27 +25,26 @@ Credit Default Prediction Project/
 ├── xgb_model.pkl          # Trained XGBoost model
 ├── dv.pkl                 # DictVectorizer model
 │
-```
 
 ---
-# Data Dictionary
+## Data Description
 
 The Default of Credit Clients dataset contains the following features:
 
-## ID
+### ID
 A unique identifier for each client. This column was dropped during preprocessing as it was not relevant for analysis.
 
-## LIMIT_BAL
+### LIMIT_BAL
 The amount of credit granted to the client (in NT dollars). This includes both individual and family credit.
 
-## SEX
+### SEX
 The gender of the client. Originally encoded as:
 - `1`: Male
 - `2`: Female
 
 These values were mapped to descriptive labels (`male` and `female`) for clarity.
 
-## EDUCATION
+### EDUCATION
 The education level of the client. Originally encoded as numeric values:
 - `1`: Graduate
 - `2`: University
@@ -55,7 +53,7 @@ The education level of the client. Originally encoded as numeric values:
 
 These were mapped to descriptive labels for better understanding.
 
-## MARRIAGE
+### MARRIAGE
 The marital status of the client. Originally encoded as:
 - `1`: Married
 - `2`: Single
@@ -63,10 +61,10 @@ The marital status of the client. Originally encoded as:
 
 Values were mapped to descriptive labels.
 
-## AGE
+### AGE
 The client\u2019s age in years.
 
-## PAY_0 to PAY_6
+### PAY_0 to PAY_6
 Repayment status for the last six months. Originally encoded as:
 - `-2`: Not paid duly
 - `-1`: Paid duly
@@ -77,20 +75,20 @@ Repayment status for the last six months. Originally encoded as:
 
 These values were mapped to descriptive labels, such as "Paid Duly" and "Delay of X Months," during preprocessing.
 
-## BILL_AMT1 to BILL_AMT6
+### BILL_AMT1 to BILL_AMT6
 The bill statement amounts (in NT dollars) for the past six months.
 
-## PAY_AMT1 to PAY_AMT6
+### PAY_AMT1 to PAY_AMT6
 The amounts paid by the client (in NT dollars) over the past six months.
 
-## default_payment
+### default_payment
 The target variable indicating whether the client defaulted on their payment:
 - `0`: No default
 - `1`: Default
 
 ---
 
-# Reference
+## Reference
 For additional details about the dataset, refer to the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients).
 
 ## Setup and Installation
@@ -98,8 +96,8 @@ For additional details about the dataset, refer to the [UCI Machine Learning Rep
 ### 1. Clone the Repository
 Clone this repository to your local machine:
 ```bash
-git clone https://github.com/your-repo-url.git
-cd "Credit Default Prediction Project"
+git clone https://github.com/Kiprotich2019/Credit-Default-Project.git
+cd "Credit-Default-Prediction-Project"
 ```
 
 ### 2. Set Up Virtual Environment
