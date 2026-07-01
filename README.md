@@ -1,4 +1,3 @@
-
 # Credit Default Prediction Project
 
 ## Project Overview
@@ -41,7 +40,7 @@ The marital status of the client. Originally encoded as:
 Values were mapped to descriptive labels.
 
 ### AGE
-The client\u2019s age in years.
+The client's age in years.
 
 ### PAY_0 to PAY_6
 Repayment status for the last six months. Originally encoded as:
@@ -75,8 +74,8 @@ For additional details about the dataset, refer to the [UCI Machine Learning Rep
 ### 1. Clone the Repository
 Clone this repository to your local machine:
 ```bash
-git clone https://github.com/Kiprotich2019/Credit-Default-Project.git
-cd "Credit-Default-Prediction-Project"
+git clone https://github.com/KiprotichTerer/Credit-Default-Project.git
+cd Credit-Default-Project
 ```
 
 ### 2. Set Up Virtual Environment
@@ -116,20 +115,6 @@ python predict.py
 
 ---
 
-## Docker Deployment
-
-Build and run the Docker container for the service:
-1. Build the Docker image:
-   ```bash
-   docker build -t credit-default.
-   ```
-2. Run the container:
-   ```bash
-   docker run -d -p 9696:9696 --name Credit credit-default.
-   ```
-
----
-
 ## Deployment
 This project can be deployed locally using Docker or to the cloud using AWS Elastic Beanstalk. Below are the detailed steps for both methods:
 
@@ -147,56 +132,6 @@ docker build -t credit-default .
 #### Step 3: Run the Docker Container
 Start the Docker container and expose it on port `9696`:
 ```bash
-docker run -d -p 9696:9696 --name Credit credit-default.
+docker run -d -p 9696:9696 --name Credit credit-default
 ```
 #### Step 4: Access the Service
-```
-The service will be available at [http://localhost:9696](http://localhost:9696).
-```
-
-### Deploy to AWS Elastic Beanstalk
-
-#### Step 1: Install AWS Elastic Beanstalk CLI
-Install the Elastic Beanstalk CLI by following the [AWS EB CLI installation guide](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html).
-
-#### Step 2: Initialize Elastic Beanstalk
-In the project directory, run:
-```bash
-eb init
-```
-- Choose your AWS region.
-- Enter an application name (e.g., `credit-default`).
-- Select `Docker` as the platform.
-- Set up SSH access if required for troubleshooting.
-
-#### Step 3: Create an Elastic Beanstalk Environment
-Create a new environment to host the application:
-```bash
-eb create credit-card-default-env
-```
-
-#### Step 4: Deploy the Application
-Use the following command to deploy the project to Elastic Beanstalk:
-```bash
-eb deploy
-```
-
-#### Step 5: Access the Application
-Once deployed, Elastic Beanstalk will provide a URL to access your application. You can also use:
-```bash
-eb open
-```
-
-#### Step 6: Monitor and Manage
-- To view logs:
-  ```bash
-  eb logs
-  ```
-- To terminate the environment when no longer needed:
-  ```bash
-  eb terminate credit-default-env
-  ```
-
-## Contributing
-Contributions are welcome! Feel free to submit a pull request or report issues.
-
