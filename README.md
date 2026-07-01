@@ -134,4 +134,49 @@ Start the Docker container and expose it on port `9696`:
 ```bash
 docker run -d -p 9696:9696 --name Credit credit-default
 ```
+
 #### Step 4: Access the Service
+The service will be available at [http://localhost:9696](http://localhost:9696).
+
+### Deploy to AWS Elastic Beanstalk
+
+#### Step 1: Install AWS Elastic Beanstalk CLI
+Install the Elastic Beanstalk CLI by following the [AWS EB CLI installation guide](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html).
+
+#### Step 2: Initialize Elastic Beanstalk
+In the project directory, run:
+```bash
+eb init
+```
+- Choose your AWS region.
+- Enter an application name (e.g., `credit-default`).
+- Select `Docker` as the platform.
+- Set up SSH access if required for troubleshooting.
+
+#### Step 3: Create an Elastic Beanstalk Environment
+Create a new environment to host the application:
+```bash
+eb create credit-card-default-env
+```
+
+#### Step 4: Deploy the Application
+Use the following command to deploy the project to Elastic Beanstalk:
+```bash
+eb deploy
+```
+
+#### Step 5: Access the Application
+Once deployed, Elastic Beanstalk will provide a URL to access your application. You can also use:
+```bash
+eb open
+```
+
+#### Step 6: Monitor and Manage
+- To view logs:
+```bash
+  eb logs
+```
+- To terminate the environment when no longer needed:
+```bash
+  eb terminate credit-default-env
+```
